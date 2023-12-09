@@ -98,8 +98,21 @@ Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiController@hapus')
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiController@cari');
 Route::get('/pegawai/view/{id}','App\Http\Controllers\PegawaiController@view');
 
-//route KeranjangBelanja
+//route CRUD KeranjangBelanja
 Route::get('/keranjangbelanja','App\Http\Controllers\KeranjangBelanjaController@index2');
 Route::get('/keranjangbelanja/beli','App\Http\Controllers\KeranjangBelanjaController@beli');
 Route::post('/keranjangbelanja/store','App\Http\Controllers\KeranjangBelanjaController@store');
 Route::get('/keranjangbelanja/hapus/{id}','App\Http\Controllers\KeranjangBelanjaController@hapus');
+
+//route CRUD Bedak
+Route::get('/bedak','App\Http\Controllers\BedakController@indexbedak');
+Route::get('/bedak/tambah','App\Http\Controllers\BedakController@tambahbedak');
+Route::post('/bedak/store','App\Http\Controllers\BedakController@store');
+Route::get('/bedak/edit/{kodebedak}','App\Http\Controllers\BedakController@editbedak');
+Route::post('/bedak/update','App\Http\Controllers\BedakController@update');
+Route::get('/bedak/hapus/{kodebedak}','App\Http\Controllers\BedakController@hapus');
+
+//route CRUD nilaikuliah
+Route::get('/nilaikuliah','App\Http\Controllers\NilaiKuliahController@indexnilai');
+Route::get('/nilaikuliah/tambahnilai','App\Http\Controllers\NilaiKuliahController@tambahnilai');
+Route::post('/nilaikuliah/store','App\Http\Controllers\NilaiKuliahController@store');
