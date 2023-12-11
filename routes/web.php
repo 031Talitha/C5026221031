@@ -116,3 +116,6 @@ Route::get('/bedak/hapus/{kodebedak}','App\Http\Controllers\BedakController@hapu
 Route::get('/nilaikuliah','App\Http\Controllers\NilaiKuliahController@indexnilai');
 Route::get('/nilaikuliah/tambahnilai','App\Http\Controllers\NilaiKuliahController@tambahnilai');
 Route::post('/nilaikuliah/store','App\Http\Controllers\NilaiKuliahController@store');
+
+//route CRUD CHAT
+Route::get('/chat','App\Http\Controllers\ChatController@indexchat');
